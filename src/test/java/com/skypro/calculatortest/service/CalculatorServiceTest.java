@@ -20,7 +20,7 @@ public class CalculatorServiceTest {
     @Test
     public void multiplyTest(){
         Assertions.assertEquals(4, service.multiply(2,2));
-        Assertions.assertEquals(120, service.multiply(10,12));
+        Assertions.assertEquals(150, service.multiply(10,15));
     }
     @Test
     public void divideTest(){
