@@ -5,32 +5,32 @@ import org.junit.jupiter.api.Test;
 
 public class CalculatorServiceTest {
 
-    private final CalculatorService calculatorService = new CalculatorService();
+    private final CalculatorService service = new CalculatorService();
 
     @Test
     public void plusTest(){
-        Assertions.assertEquals(4,calculatorService.plus(2,2));
-        Assertions.assertEquals(400,calculatorService.plus(332,68));
+        Assertions.assertEquals(4, service.plus(2,2));
+        Assertions.assertEquals(400, service.plus(332,68));
     }
     @Test
     public void minusTest(){
-        Assertions.assertEquals(0,calculatorService.minus(2,2));
-        Assertions.assertEquals(10,calculatorService.minus(19,9));
+        Assertions.assertEquals(0, service.minus(2,2));
+        Assertions.assertEquals(10, service.minus(19,9));
     }
     @Test
     public void multiplyTest(){
-        Assertions.assertEquals(4,calculatorService.multiply(2,2));
-        Assertions.assertEquals(120,calculatorService.multiply(10,12));
+        Assertions.assertEquals(4, service.multiply(2,2));
+        Assertions.assertEquals(120, service.multiply(10,12));
     }
     @Test
     public void divideTest(){
-        Assertions.assertEquals(1,calculatorService.divide(2,2));
-        Assertions.assertEquals(111,calculatorService.divide(222,2));
+        Assertions.assertEquals(1, service.divide(2,2));
+        Assertions.assertEquals(111, service.divide(222,2));
     }
     @Test
     public void throwExceptionTest(){
-        Assertions.assertThrows(IllegalArgumentException.class,() ->  calculatorService.divide(3,0));
-        Assertions.assertThrows(IllegalArgumentException.class,() ->  calculatorService.divide(0,0));
+        Assertions.assertThrows(IllegalArgumentException.class,() ->  service.divide(3,0));
+        Assertions.assertThrows(IllegalArgumentException.class,() ->  service.divide(0,0));
     }
 
 
